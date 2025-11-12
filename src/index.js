@@ -1,4 +1,3 @@
-// Calls necessary logic to update DOM from appropriate
-// module(s)
+// Calls necessary logic to initialize the application
 
 import "./styles.css";
