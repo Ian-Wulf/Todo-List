@@ -3,7 +3,7 @@ import Project from "./project.js";
 
 export default function AppController() {
     // initialize todolist
-    const todoList = ToDoList();
+    const todoList = TodoList();
 
     // initialize DOM
     function init() {
