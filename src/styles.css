@@ -4,14 +4,27 @@
     margin: 0;
 }
 
-#projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr;
-    border: solid 1px black;
+html, body {
+    height: 100%;
+}
 
+#container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar projects"
+                         "sidebar projects";
+    height: 100%;
+}
+
+#sidebar {
+    background-color: rgb(5, 112, 41);
+}
+
+#projects {
+    /* border: 1px solid black; */
 }
 
 .project-card {
-
+     border: 1px solid black;
 }

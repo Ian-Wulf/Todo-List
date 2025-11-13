@@ -13,7 +13,7 @@ export default function AppController() {
     }
 
     // add task to project
-    function addTask(name, description, dueDate, priority) {
+    function addTask() {
          
     }
 

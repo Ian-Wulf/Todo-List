@@ -6,3 +6,4 @@ import AppController from "./appcontroller.js";
 const app = AppController();
 app.init();
 
+window.app = app;
