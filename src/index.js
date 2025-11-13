@@ -5,3 +5,4 @@ import AppController from "./appcontroller.js";
 
 const app = AppController();
 app.init();
+
