@@ -1,5 +1,6 @@
 import TodoList from "./todolist.js";
 import Project from "./project.js";
+import Task from "./task.js";
 
 export default function AppController() {
     // initialize todolist
@@ -8,6 +9,11 @@ export default function AppController() {
     // initialize DOM
     function init() {
 
+    }
+
+    // add task to project
+    function addTask(name, description, dueDate, priority) {
+         
     }
 
     // be able to add project to list and render it
