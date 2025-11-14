@@ -6,10 +6,16 @@ import DOMController from "./DOMController.js";
 export default function AppController() {
     // initialize todolist
     const todoList = TodoList();
-
+    const addProjectBtn = document.getElementById('add-project');
     // initialize DOM
     function init() {
+        todoList.addProject(Project("Todo"));
+
         DOMController.renderProjects(todoList.getProjects());
+        
+        addProjectBtn.addEventListener('click', function() {
+            addProject("Essay");
+        });
     }
 
     // add task to project
