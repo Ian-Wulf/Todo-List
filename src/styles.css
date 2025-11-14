@@ -18,8 +18,16 @@ html, body {
 }
 
 #sidebar {
-    background-color: rgb(5, 112, 41);
+    box-shadow: 2px 0px 5px rgb(168, 168, 168);
+
+
 }
+
+#add-project {
+    all: unset;
+}
+
+
 
 #projects {
     /* border: 1px solid black; */
