@@ -22,6 +22,34 @@
         </div>
         <div id="project-area"></div>
     </div>
-    <dialog id="modal"></dialog>
+    <dialog id="modal">
+        <form id="new-task-form">
+            <button type="button" class="close-button">x</button>
+            <h3 id="new-task-header">New Task</h3>
+            <div class="task-form-row">
+                <label for="task-title" id="task-title-label">Title:</label>
+                <input type="text" id="task-title" name="title">
+            </div>
+            <div class="task-form-row">
+                <label for="task-desc" id="task-desc-label">Description:</label>
+                <textarea id="task-desc" name="description" maxlength="150" rows="2" cols="24"></textarea>
+            </div>
+            <div class="task-form-row">
+                <label for="date">Due Date:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="task-form-row">
+                <label for="priority">Priority:</label>
+                <select name="priority" id="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <button type="button" class="submit-button" value="submit">Add Task</button>
+        </form>
+    </dialog>
 </body>
 </html>

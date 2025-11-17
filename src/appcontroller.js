@@ -19,6 +19,8 @@ export default function AppController() {
             modal.displayProjectModal(addProject);
         });
 
+        const dialog = document.getElementById('modal');
+        dialog.showModal();
     }
 
     // add task to project
