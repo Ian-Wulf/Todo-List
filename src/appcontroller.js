@@ -16,6 +16,9 @@ export default function AppController() {
         addProjectBtn.addEventListener('click', function() {
             addProject("Essay");
         });
+
+        const dialog = document.getElementById('new-project-modal');
+        dialog.showModal();
     }
 
     // add task to project

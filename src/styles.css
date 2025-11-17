@@ -1,5 +1,6 @@
 :root {
     --selected-color: #b2c9d3;
+    --color1: #1ba3e2;
 }
 
 * {
@@ -47,7 +48,7 @@ html, body {
 
 #add-project-button {
     all: unset;
-    color: #1ba3e2;
+    color: var(--color1);
     font-size: 1.05rem;
     font-weight: 600;
 }
@@ -90,7 +91,54 @@ html, body {
     width: 100%;
 }
 
-
 .task-button {
     all: unset;
+}
+
+#new-project-modal {
+    justify-self: center;
+    align-self: center;
+    width: 25rem;
+
+    border: 3px solid var(--color1);
+    border-radius: 10px;
+}
+
+#new-project-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+#project-close-button {
+    all: unset;
+    justify-self: end;
+    cursor: pointer;
+}
+
+#project-close-button:hover {
+    color: gray;
+}
+
+#new-project-header {
+    justify-self: center;
+    color: var(--color1);
+}
+
+#project-title-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 0.5em 1em;
+    gap: 1rem;
+    align-items: center;
+}
+
+#project-title-label {
+    font-size: 1rem;
+}
+
+#project-title {
+    height: 2rem;
+    padding-left: 0.7rem;
 }
