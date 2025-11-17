@@ -2,10 +2,12 @@ import TodoList from "./todolist.js";
 import Project from "./project.js";
 import Task from "./task.js";
 import DOMController from "./DOMController.js"; 
+import ModalController from "./ModalController.js";
 
 export default function AppController() {
     // initialize todolist
     const todoList = TodoList();
+    const modal = ModalController();
     const addProjectBtn = document.getElementById('add-project');
     // initialize DOM
     function init() {
@@ -14,11 +16,9 @@ export default function AppController() {
         DOMController.renderProjects(todoList.getProjects());
         
         addProjectBtn.addEventListener('click', function() {
-            addProject("Essay");
+            modal.displayProjectModal(addProject);
         });
 
-        const dialog = document.getElementById('new-project-modal');
-        dialog.showModal();
     }
 
     // add task to project
@@ -28,8 +28,10 @@ export default function AppController() {
 
     // be able to add project to list and render it
     // on DOM
-    function addProject(name) {
-        todoList.addProject(Project(name));
+    function addProject(data) {
+        const title = data.title;
+
+        todoList.addProject(Project(title));
         // render to DOM
         DOMController.renderProjects(todoList.getProjects());
     }

@@ -95,7 +95,7 @@ html, body {
     all: unset;
 }
 
-#new-project-modal {
+#modal {
     justify-self: center;
     align-self: center;
     width: 25rem;
@@ -106,19 +106,22 @@ html, body {
 
 #new-project-form {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 0 1rem;
+    grid-template-rows: 0.5rem repeat(3, 2rem);
+    padding: 1rem;
+    gap: 2rem;
+    justify-items: center;
 }
 
 #project-close-button {
     all: unset;
     justify-self: end;
     cursor: pointer;
+    font-size: 1.2rem;
+    color: gray;
 }
 
 #project-close-button:hover {
-    color: gray;
+    color: black;
 }
 
 #new-project-header {
@@ -130,7 +133,7 @@ html, body {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 0.5em 1em;
-    gap: 1rem;
+    gap: 0rem;
     align-items: center;
 }
 
@@ -139,6 +142,22 @@ html, body {
 }
 
 #project-title {
+    all: unset;
     height: 2rem;
     padding-left: 0.7rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#project-title:focus {
+    border: 2px solid var(--selected-color);
+}
+
+#submit-button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color1);
+    color: white;
+    font-weight: 600;
+    width: 7rem;
 }
