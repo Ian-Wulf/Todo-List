@@ -13,19 +13,20 @@ export default function AppController() {
     function init() {
         todoList.addProject(Project("Todo"));
 
-        DOMController.renderProjects(todoList.getProjects());
+        DOMController.init(todoList.getProjects());
         
         addProjectBtn.addEventListener('click', function() {
             modal.displayProjectModal(addProject);
         });
 
-        const dialog = document.getElementById('modal');
-        dialog.showModal();
     }
 
     // add task to project
-    function addTask() {
-         
+    function addTask(data) {
+         const title = data.title;
+         const description = data.description;
+         const dueDate = data.dueDate;
+         const priority = data.priority;
     }
 
     // be able to add project to list and render it

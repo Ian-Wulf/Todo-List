@@ -205,6 +205,7 @@ html, body {
     border: 1px solid var(--selected-color);
     border-radius: 5px;
     padding: 0.3rem 0.5rem;
+    width: 13.5rem;
 }
 
 #task-desc:focus {
